@@ -8,5 +8,112 @@
 --color-blue-black: #011D73;
 --color-blue-red: #4E0330;
 --color-jauche-cassé: #FDF3AD;
---color-produit-service-reseau: #BCE7E6
+--color-produit-service-reseau: #BCE7E6;
+--color-footer:#010D1C;
+}
+html{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body{
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+ display: none;
+}
+.menu-close {
+  display: none;
+}
+
+.menu.active .menu-open {
+  display: none;
+}
+
+.menu.active .menu-close {
+  display: block;
+}
+.bkground{
+  background: url('../images/marhaba1.png') no-repeat center center fixed;
+  background-size: cover;
+}
+.logo-item{
+  flex-shrink: 0;
+}
+
+.logo-item img{
+  width: 120px;
+  display: block;
+}
+@layer components{
+  .btn {
+    @apply bg-blue hover:bg-orange text-white px-4 py-2 max-md:p-1 rounded-xl border-4 border-grey font-semibold transition duration-300 relative
+           after:content-['→']
+           after:opacity-0
+           after:ml-0
+           after:inline-block
+           after:transition-all
+           after:duration-300
+           after:ease-in
+           hover:after:opacity-100
+           hover:after:ml-2
+           
+           
+  }
+  .btn-marhaba {
+    @apply bg-white text-center hover:text-white hover:bg-orange text-black px-4 py-2 max-md:p-1 rounded-xl border-4 border-grey font-semibold transition duration-300 relative
+           after:content-['→']
+           after:opacity-0
+           after:ml-0
+           after:inline-block
+           after:transition-all
+           after:duration-300
+           after:ease-in
+           hover:after:opacity-100
+           hover:after:ml-2
+           
+           
+  }
+  .btn-marhaba1 {
+    @apply bg-transparent text-center hover:bg-white hover:text-orange text-white px-4 py-2 max-md:p-1 rounded-xl border-4 border-grey font-semibold transition duration-300 relative
+           after:content-['→']
+           after:opacity-0
+           after:ml-0
+           after:inline-block
+           after:transition-all
+           after:duration-300
+           after:ease-in
+           hover:after:opacity-100
+           hover:after:ml-2
+           
+           
+  }
+  .btn-pays{
+    @apply bg-white hover:text-orange px-4 py-2 rounded-xl border-4 border-transparent
+  }
+
+}
+@layer utilities{
+    .nav-link{
+      @apply text-white text-sm hover:text-orange-400 transition duration-300 cursor-pointer;
+    }
+
+    .dropdown-item{
+      @apply block px-4 py-2 text-sm hover:bg-gray-100 transition;
+    }
+
+    .stat-number{
+      @apply text-4xl font-bold text-orange;
+    }
+
+    .section-title{
+      @apply text-3xl md:text-4xl font-bold text-black leading-tight;
+    }
+
+    .btn-primary{
+      @apply bg-white text-black px-5 py-3 rounded-md font-semibold hover:bg-orange hover:text-white transition duration-300;
+    }
+
+    .btn-secondary{
+      @apply border border-white text-white px-5 py-3 rounded-md font-semibold hover:bg-white hover:text-black transition duration-300;
+    }
 }
