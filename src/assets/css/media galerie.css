@@ -1,0 +1,187 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Conteneur principal */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Pleine hauteur de l'écran */
+    min-height: 500px;
+    display: flex;
+    align-items: flex-end; /* Aligne le contenu en bas */
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+/* Image d'arrière-plan responsive */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Remplacer l'URL ci-dessous par le chemin de votre image locale */
+    background-image: url('../images/RUzacESMo0Gin7LiJ89anuvrPyo.png'); 
+    background-size: cover;
+    background-position: center 30%;
+    z-index: 1;
+}
+
+/* Filtre sombre pour garantir le contraste du texte blanc */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+/* Zone du texte */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 80px 40px; /* Marges internes adaptées */
+    color: #ffffff;
+}
+
+/* Titre principal */
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.15;
+    max-width: 600px;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    color: white;
+}
+
+/* Description */
+.hero-description {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 500px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    color: white;
+}
+
+
+
+/* ==========================================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================================== */
+
+/* Tablettes (Écrans inférieurs à 992px) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+        max-width: 500px;
+    }
+    
+    .hero-content {
+        padding: 0 30px 60px 30px;
+    }
+}
+
+/* Smartphones grands modèles (Écrans inférieurs à 768px) */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 90vh; /* Réduction légère de la hauteur sur mobile */
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        max-width: 100%;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+    
+    .hero-content {
+        padding: 0 20px 40px 20px;
+    }
+}
+
+
+
+
+/* body {
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+} */
+
+/* Conteneur principal */
+.gallery-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Grille Mobile d'abord (1 colonne) */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px; /* Espace entre les images */
+}
+
+/* Style des cartes */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px; /* Coins arrondis identiques à l'image */
+  aspect-ratio: 4 / 3; /* Force un ratio harmonieux */
+}
+
+/* Comportement des images */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Empêche la déformation */
+  display: block;
+  transition: transform 0.3s ease; /* Animation fluide au survol */
+}
+
+/* Effet interactif optionnel au survol */
+.gallery-item:hover img {
+  transform: scale(1.03);
+}
+
+/* Tablettes (2 colonnes) */
+@media (min-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  /* .gallery-container {
+    margin-right: 150px;
+    padding: 200px;
+  } */
+}
+
+/* Écrans PC (3 colonnes - Strictement comme le modèle) */
+@media (min-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+

@@ -1,0 +1,117 @@
+/* Réinitialisation de base et police */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Grille principale responsive */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Style individuel des cartes */
+.card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* transform: scale(0.98); */
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    cursor: pointer;
+}
+
+/* Images responsives */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+    .hero-button:hover {
+    background-color: #f0f0f0;
+}
+
+}
+
+/* Effet zoom sur l'image au survol */
+.card:hover .card-image {
+  transform: scale(1.05);
+}
+
+
+/* Superposition sombre en bas de l'image */
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8) 100%);
+    transition: padding-bottom 0.3s ease; /* Animation du bloc texte */
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 100%); */
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.card:hover .card-overlay {
+  padding-bottom: 25px;
+}
+
+
+/* .card-overlay:hover {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 100%);
+    padding: 20px;
+    padding-top: 40px;
+    transform: translateY(30%) ease 1s;
+
+} */
+
+/* Style du texte */
+.card-text {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0 0 5px 0;
+    font-family: sans-serif;
+}
+
+.card-subtitle {
+  color: #b3b3b3;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Adaptation pour les écrans mobiles */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .card-text {
+        font-size: 0.9rem;
+    }
+}

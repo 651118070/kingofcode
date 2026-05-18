@@ -5,262 +5,1241 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ola Energy</title>
+  <link rel="icon" href="./assets/images/logoola.png" type="image/png">
   <link rel="stylesheet" href="./assets/css/output.css" />
 </head>
 
 <body class="overflow-x-hidden">
-  <main>
-    <section class="relative w-full h-screen overflow-hidden">
-      <!-- Overlay -->
-      <!-- <div class="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-black/40 to-transparent z-10"></div> -->
+  <header class="fixed top-0 z-50 bg-white w-full shadow-sm">
+    <section
+      class="lg:flex justify-between flex-col gap-6 px-6 py-4 max-w-7xl mx-auto hidden"
+    >
+      <div class="flex justify-between items-center">
+       <a href="./index.html">
+        <img src="./assets/images/logoola.png" alt="logo" class="w-20" />
+       </a>
+        <div class="flex space-x-6">
+          <div class="relative group">
+            <!-- TRIGGER -->
+            <div class="flex items-center gap-2 cursor-pointer py-2 group/item">
+              <span class="hover:text-orange-500 transition"
+                >Institutionnel</span
+              >
+              <!-- Down icon -->
+              <i class="fa-solid fa-angle-down transition duration-300 group-hover/item:opacity-0"></i>
+              <i class="fa-solid fa-angle-right transition duration-300 opacity-0 group-hover/item:opacity-100 group-hover/item:text-orange "></i>
+            </div>
+            <!-- DROPDOWN -->
+            <div
+              class="absolute left-0 top-10 mt-2 w-100 bg-white border border-white rounded-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out shadow-lg shadow-black/10"
+            >
+              <div class="p-2 space-y-1 text-nowrap">
+                <!-- ITEM 1 -->
+                <div
+                  class="group/item flex items-start justify-between gap-3 p-3 rounded-xl hover:shadow hover:bg-white transition duration-300 cursor-pointer"
+                >
+                  <a href="./about.html">
+                    <p class="text-lg">Qui sommes-nous?</p>
+                    <span class="text-[11px] text-grey"
+                      >Un groupe énergétique africain</span
+                    >
+                  </a>
+                  <i
+                    class="fa-solid fa-arrow-right opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300 ease-out text-orange-500 pt-2"
+                  ></i>
+                </div>
+                <!-- ITEM 2 -->
+                <div
+                  class="group/item flex items-start justify-between gap-3 p-3 rounded-xl hover:shadow hover:bg-white transition duration-300 cursor-pointer"
+                >
+                  <div>
+                  <a href="./message.html">
+                      <p class="text-lg">Message du Président Exécutif</p>
+                    <span class="text-[11px] text-grey">
+                      L'énergie, c'est une affaire de personnes, de sens et de
+                      progrès
+                    </span>
+                  </a>
+                  </div>
+                  <i
+                    class="fa-solid fa-arrow-right opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300 ease-out text-orange-500 pt-2"
+                  ></i>
+                </div>
+                <!-- ITEM 3 -->
+                <div
+                  class="group/item flex items-start justify-between gap-3 p-3 rounded-xl hover:shadow hover:bg-white transition duration-300 cursor-pointer"
+                >
+                  <div>
+                  <a href="./leadership.html">
+                    <p class="text-lg">Comité exécutif</p>
+                    <span class="text-[11px] text-grey"
+                      >L'équipe de direction d'OLA Energy</span
+                    >
+                  </a>
+                  </div>
+                  <i
+                    class="fa-solid fa-arrow-right opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300 ease-out text-orange-500 pt-2"
+                  ></i>
+                </div>
+                <!-- ITEM 4 -->
+                <div
+                  class="group/item flex items-start justify-between gap-3 p-3 rounded-xl hover:shadow hover:bg-white transition duration-300 cursor-pointer"
+                >
+                  <div>
+                  <a href="./marques.html">
+                    <p class="text-lg">Marques</p>
+                    <span class="text-[11px] text-grey"
+                      >Un portefeuille de marques complémentaires</span
+                    >
+                  </a>
+                  </div>
+                  <i
+                    class="fa-solid fa-arrow-right opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300 ease-out text-orange-500 pt-2"
+                  ></i>
+                </div>
+                <!-- ITEM 5 -->
+                <div
+                  class="group/item flex items-start justify-between gap-3 p-3 rounded-xl hover:shadow hover:bg-white transition duration-300 cursor-pointer"
+                >
+                  <div>
+                  <a href="./conduite.html">
+                      <p class="text-lg">Code de conduite des affaires</p>
+                    <span class="text-[11px] text-grey">
+                      Principes et guides qui nous guident au quotidien
+                    </span>
+                  </a>
+                  </div>
+                  <i
+                    class="fa-solid fa-arrow-right opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300 ease-out text-orange-500 pt-2"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative group z-20">
+            <!-- TRIGGER -->
+            <div class="flex items-center gap-2 cursor-pointer py-2 group/item">
+              <span
+                class="group-hover:text-orange-500 transition duration-300"
+              >
+                Produits et Services
+              </span>
+              <!-- Down icon -->
+              <i class="fa-solid fa-angle-down transition duration-300 group-hover/item:opacity-0"></i>
+              <i class="fa-solid fa-angle-right transition duration-300 opacity-0 group-hover/item:opacity-100 group-hover/item:text-orange "></i>
+            </div>
+            <!-- DROPDOWN -->
+            <div
+              class="absolute left-0 -top-1 mt-2 w-200 bg-white border border-gray-100 rounded-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out shadow-lg shadow-black/10"
+            >
+              <div class="grid grid-cols-2 gap-8 p-6 text-nowrap">
+                <!-- ENTREPRISES -->
+                <div class="flex flex-col gap-3">
+                  <h2 class="text-xs font-semibold uppercase tracking-wide">
+                    Entreprises
+                  </h2>
+                  <div class="space-y-2">
+                    <!-- ITEM -->
+                    <div
+                      class="group/item p-2 rounded-lg cursor-pointer transition-all duration-300 hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 flex justify-between items-start gap-3"
+                    >
+                      <div>
+                        <p class="text-base font-medium">Reseau de Station</p>
+                        <span class="text-[11px] text-gray-500"
+                          >Un model de vente au detail eprouve</span
+                        >
+                      </div>
+                      <i
+                        class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300"
+                      ></i>
+                    </div>
+                    <!-- ITEM -->
+                    <div
+                      class="group/item p-2 rounded-lg cursor-pointer transition-all duration-300 hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 flex justify-between items-start gap-3"
+                    >
+                      <div>
+                        <p class="text-base font-medium">Lubrifiants</p>
+                        <span class="text-[11px] text-gray-500"
+                          >Solution techniques de lubrification</span
+                        >
+                      </div>
+                      <i
+                        class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300"
+                      ></i>
+                    </div>
+                    <!-- ITEM -->
+                    <div
+                      class="group/item p-2 rounded-lg cursor-pointer transition-all duration-300 hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 flex justify-between items-start gap-3"
+                    >
+                      <div>
+                        <p class="text-base font-medium">O'Card</p>
+                        <span class="text-[11px] text-gray-500"
+                          >Controle totale et visibilite</span
+                        >
+                      </div>
+                      <i
+                        class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300"
+                      ></i>
+                    </div>
+                    <!-- ITEM -->
+                    <div
+                      class="group/item p-2 rounded-lg cursor-pointer transition-all duration-300 hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 flex justify-between items-start gap-3"
+                    >
+                      <div>
+                        <p class="text-base font-medium">marhaba</p>
+                        <span class="text-[11px] text-gray-500"
+                          >Un concept de commerce de proximite evolutif</span
+                        >
+                      </div>
+                      <i
+                        class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300"
+                      ></i>
+                    </div>
+                    <!-- ITEM -->
+                    <div
+                      class="group/item p-2 rounded-lg cursor-pointer transition-all duration-300 hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 flex justify-between items-start gap-3"
+                    >
+                      <div>
+                        <p class="text-base font-medium">Aviation</p>
+                        <span class="text-[11px] text-gray-500"
+                          >Service fiables de carburant d'aviation</span
+                        >
+                      </div>
+                      <i
+                        class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300"
+                      ></i>
+                    </div>
+                    <!-- ITEM -->
+                    <div
+                      class="group/item p-2 rounded-lg cursor-pointer transition-all duration-300 hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 flex justify-between items-start gap-3"
+                    >
+                      <div>
+                        <p class="text-base font-medium">Marine</p>
+                        <span class="text-[11px] text-gray-500"
+                          >Approvisionnement fiable en carburant et
+                          lubrifiants marins</span
+                        >
+                      </div>
+                      <i
+                        class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300"
+                      ></i>
+                    </div>
+                    <!-- ITEM -->
+                    <div
+                      class="group/item p-2 rounded-lg cursor-pointer transition-all duration-300 hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 flex justify-between items-start gap-3"
+                    >
+                      <div>
+                        <p class="text-base font-medium">
+                          Industriel et vente en gros
+                        </p>
+                        <span class="text-[11px] text-gray-500"
+                          >Solutions de carburant et de lubrifiants sur
+                          mesure</span
+                        >
+                      </div>
+                      <i
+                        class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300"
+                      ></i>
+                    </div>
+                    <!-- ITEM -->
+                    <div
+                      class="group/item p-2 rounded-lg cursor-pointer transition-all duration-300 hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 flex justify-between items-start gap-3"
+                    >
+                      <div>
+                        <p class="text-base font-medium">
+                          Approvisionnement et negoce
+                        </p>
+                        <span class="text-[11px] text-gray-500"
+                          >Approvisionnement mondial. Negoce strategique</span
+                        >
+                      </div>
+                      <i
+                        class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- PARTICULIERS -->
+                <div class="flex flex-col gap-3">
+                  <h2 class="text-xs font-semibold uppercase tracking-wide">
+                    Particuliers
+                  </h2>
+                  <div class="space-y-2">
+                    <!-- ITEM -->
+                    <div
+                      class="group/item p-2 rounded-lg cursor-pointer transition-all duration-300 hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 flex justify-between items-start gap-3"
+                    >
+                      <div>
+                        <p class="text-base font-medium">Stations-service</p>
+                        <span class="text-[11px] text-gray-500"
+                          >Un carburant fiable et une commodite au
+                          quotidien.</span
+                        >
+                      </div>
+                      <i
+                        class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300"
+                      ></i>
+                    </div>
+                    <!-- ITEM -->
+                    <div
+                      class="group/item p-2 rounded-lg cursor-pointer transition-all duration-300 hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 flex justify-between items-start gap-3"
+                    >
+                      <div>
+                        <p class="text-base font-medium">OLA AutoCare</p>
+                        <span class="text-[11px] text-gray-500"
+                          >Entretien professionelle des vehicules</span
+                        >
+                      </div>
+                      <i
+                        class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300"
+                      ></i>
+                    </div>
+                    <!-- ITEM -->
+                    <div
+                      class="group/item p-2 rounded-lg cursor-pointer transition-all duration-300 hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 flex justify-between items-start gap-3"
+                    >
+                      <div>
+                        <p class="text-base font-medium">O'Card</p>
+                        <span class="text-[11px] text-gray-500"
+                          >Des solutions de paiement intelligentes et
+                          securisees</span
+                        >
+                      </div>
+                      <i
+                        class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300"
+                      ></i>
+                    </div>
+                    <!-- ITEM -->
+                    <div
+                      class="group/item p-2 rounded-lg cursor-pointer transition-all duration-300 hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 flex justify-between items-start gap-3"
+                    >
+                      <div>
+                        <p class="text-base font-medium">Lubrifiants</p>
+                        <span class="text-[11px] text-gray-500"
+                          >Lubrifiants haute performance</span
+                        >
+                      </div>
+                      <i
+                        class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300"
+                      ></i>
+                    </div>
+                    <!-- ITEM -->
+                    <div
+                      class="group/item p-2 rounded-lg cursor-pointer transition-all duration-300 hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 flex justify-between items-start gap-3"
+                    >
+                      <div>
+                        <p class="text-base font-medium">GPL</p>
+                        <span class="text-[11px] text-gray-500"
+                          >Solutions GPL sures, efficaces et fiables</span
+                        >
+                      </div>
+                      <i
+                        class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300"
+                      ></i>
+                    </div>
+                    <!-- ITEM -->
+                    <div
+                      class="group/item p-2 rounded-lg cursor-pointer transition-all duration-300 hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-100 flex justify-between items-start gap-3"
+                    >
+                      <div>
+                        <p class="text-base font-medium">marhaba</p>
+                        <span class="text-[11px] text-gray-500"
+                          >Confort, commodite et l'essentiel</span
+                        >
+                      </div>
+                      <i
+                        class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative group">
+            <!-- TRIGGER -->
+            <div class="flex items-center gap-2 cursor-pointer py-2 group/item">
+              <span class="hover:text-orange-500 transition duration-300">
+                Durabilité
+              </span>
+              <i class="fa-solid fa-angle-down transition duration-300 group-hover/item:opacity-0"></i>
+              <i class="fa-solid fa-angle-right transition duration-300 opacity-0 group-hover/item:opacity-100 group-hover/item:text-orange "></i>
+            </div>
+            <!-- DROPDOWN -->
+            <div
+              class="absolute left-0 mt-2 w-100 bg-white border border-gray-100 rounded-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out shadow-lg shadow-black/10"
+            >
+              <div class="p-3 space-y-2">
+                <div
+                  class="group/item p-2 rounded-lg cursor-pointer flex justify-between gap-3 hover:bg-white hover:shadow-sm transition"
+                >
+                  <div>
+                  <a href="./developpement.html">
+                    <p>Developpement des personnes et de la communaute</p>
+                    <span class="text-[11px] text-gray-500"
+                      >Investir dans la communaute</span
+                    >
+                  </a>
+                  </div>
+                  <i
+                    class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition duration-300"
+                  ></i>
+                </div>
+                <div
+                  class="group/item p-2 rounded-lg cursor-pointer flex justify-between gap-3 hover:bg-white hover:shadow-sm transition"
+                >
+                  <div>
+                  <a href="./ethique.html">
+                    <p>Ethiques des affaires</p>
+                    <span class="text-[11px] text-gray-500"
+                      >Integrite, transparence et responsabilite</span
+                    >
+                  </a>
+                  </div>
+                  <i
+                    class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition duration-300"
+                  ></i>
+                </div>
+                <div
+                  class="group/item p-2 rounded-lg cursor-pointer flex justify-between gap-3 hover:bg-white hover:shadow-sm transition"
+                >
+                  <div>
+                  <a href="./environnement.html">
+                    <p>Environnement</p>
+                    <span class="text-[11px] text-gray-500"
+                      >Reduire l'impact environemental</span
+                    >
+                  </a>
+                  </div>
+                  <i
+                    class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition duration-300"
+                  ></i>
+                </div>
+                <div
+                  class="group/item p-2 rounded-lg cursor-pointer flex justify-between gap-3 hover:bg-white hover:shadow-sm transition"
+                >
+                  <div>
+                  <a href="./securiter operationnel.html">
+                    <p>Securite Operationelles & Routieres</p>
+                    <span class="text-[11px] text-gray-500"
+                      >Proteger les personnes</span
+                    >
+                  </a>
+                  </div>
+                  <i
+                    class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition duration-300"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative group">
+            <!-- TRIGGER -->
+            <div class="flex items-center gap-2 cursor-pointer py-2 group/item">
+              <span class="hover:text-orange-500 transition duration-300">
+                Medias
+              </span>
+              <i class="fa-solid fa-angle-down transition duration-300 group-hover/item:opacity-0"></i>
+              <i class="fa-solid fa-angle-right transition duration-300 opacity-0 group-hover/item:opacity-100 group-hover/item:text-orange "></i>
+            </div>
+            <!-- DROPDOWN -->
+            <div
+              class="absolute left-0 mt-2 w-60 bg-white border border-gray-100 rounded-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out shadow-lg shadow-black/10"
+            >
+              <div class="p-3 space-y-2">
+                <!-- ITEM 1 -->
+                <div
+                  class="group/item p-2 rounded-lg cursor-pointer flex justify-between gap-3 hover:bg-white hover:shadow-sm transition"
+                >
+                  <div>
+                  <a href="./media.html">
+                    <p>Actualites</p>
+                    <span class="text-[11px] text-gray-500"
+                      >Mises a jour et annonces</span
+                    >
+                  </a>
+                  </div>
+                  <i
+                    class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition duration-300"
+                  ></i>
+                </div>
+                <!-- ITEM 2 -->
+                <div
+                  class="group/item p-2 rounded-lg cursor-pointer flex justify-between gap-3 hover:bg-white hover:shadow-sm transition"
+                >
+                  <div>
+                   <a href="./media_galerie.html">
+                    <p>Galerie</p>
+                    <span class="text-[11px] text-gray-500"></span>
+                   </a>
+                  </div>
+                  <i
+                    class="fa-solid fa-arrow-right text-orange-500 opacity-0 translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition duration-300"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <i class="fa-regular fa-envelope"></i>
+        <div class="flex items-center">
+          <button class="btn"><span>Devenir Partenaire</span></button>
+          <button class="btn-pays">
+            <i class="fa-solid fa-basketball"></i>
+            <span>Voir tous les pays</span>
+          </button>
+          <div><span>FR</span> <i class="fa-solid fa-angle-down"></i></div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================================= 
+  MOBILE ========================================================= -->
 
-      <!-- Image -->
-      <img src="./assets/images/plaque Ola.jpeg" alt="image" class="w-full h-full object-cover" />
+    <section class="flex lg:hidden justify-between items-center px-5 py-4">
+      <img src="./assets/images/logoola.png" alt="logo" class="w-20" />
 
-      <!-- Texte -->
-      <div class="absolute top-20 left-20 z-20 space-y-4">
-        <h1 class="text-5xl font-bold text-white">Qui nous sommes</h1>
+      <div class="flex items-center gap-4">
+        <button
+          class="bg-blue text-white px-4 py-2 rounded-md text-sm font-semibold"
+        >
+          Devenir partenaire
+        </button>
 
-        <h2 class="text-2xl text-white font-semibold">
-          Une énergie qui fait avancer les marchés
-        </h2>
+        <div class="menu cursor-pointer">
+          <i class="fa-solid fa-bars text-3xl menu-open text-blue"></i>
 
-        <p class="text-lg text-white leading-6">
-          OLA Energy opère dans 17 pays et soutient la mobilité, l’activité
-          <br />
-          économique et le progrès sur des marchés africains à fort potentiel
-          de <br />
-          croissance.
-        </p>
+          <i class="fa-solid fa-close text-3xl menu-close text-blue"></i>
+        </div>
+      </div>
+    </section>
 
-        <p class="text-lg text-white leading-6">
-          Nous fournissons des solutions énergétiques fiables et accessibles,
-          <br />
-          tout en contribuant activement aux communautés que nous servons.
-          <br />
-          Notre approche repose sur une présence locale solide, une <br />
-          performance constante et un engagement à long terme.
-        </p>
+    <!-- ========================================================= -->
+    <!-- MOBILE MENU -->
+    <!-- ========================================================= -->
 
-        <p class="text-lg text-white leading-6">
-          Fondée sur l’intégrité, la transparence et la responsabilité, OLA
-          Energy <br />
-          est un partenaire de confiance, engagé dans une croissance <br />
-          responsable et un impact concret.
-        </p>
+    <section
+      id="mobileMenu"
+      class="fixed top-0 left-0 w-full h-screen bg-white z-100 px-6 py-5 transform -translate-y-full transition-transform duration-500 lg:hidden overflow-y-auto"
+    >
+      <div class="flex items-center justify-between mb-10">
+        <img src="./assets/images/logoola.png" alt="logo" class="w-20" />
 
-        <!-- Boutons -->
-        <div class="flex gap-5 pt-3">
-          <button class="border-2 border-white text-white px-4 text-lg font-semibold rounded-xl">
-            Trouver une station
+        <div class="flex items-center gap-5">
+          <button
+            class="bg-blue text-white px-5 py-3 rounded-md font-semibold text-sm"
+          >
+            Devenir partenaire
           </button>
 
-          <button class="border-2 border-white text-white px-4 py-2 text-lg font-semibold rounded-xl">
+          <i
+            id="closeMenu"
+            class="fa-solid fa-close z-200 text-3xl text-blue cursor-pointer"
+          ></i>
+        </div>
+      </div>
+
+      <!-- NAVIGATION -->
+      <div class="flex flex-col gap-7 text-[22px] text-[#222]">
+        <!-- ITEM -->
+        <div class="flex items-center justify-between cursor-pointer">
+          <span>Institutionnel</span>
+
+          <i class="fa-solid fa-angle-down text-sm"></i>
+        </div>
+
+        <!-- ITEM -->
+        <div class="flex items-center justify-between cursor-pointer">
+          <span>Produits & Services</span>
+
+          <i class="fa-solid fa-angle-down text-sm"></i>
+        </div>
+
+        <!-- ITEM -->
+        <div class="flex items-center justify-between cursor-pointer">
+          <span>OLA Energy Global</span>
+
+          <i class="fa-solid fa-angle-down text-sm"></i>
+        </div>
+      </div>
+
+      <!-- LINKS -->
+      <div class="mt-10 flex flex-wrap gap-5 text-[18px] text-[#333]">
+        <div class="flex items-center gap-2 cursor-pointer">
+          <i class="fa-regular fa-newspaper"></i>
+
+          <span>Actualités</span>
+        </div>
+
+        <div class="flex items-center gap-2 cursor-pointer">
+          <i class="fa-solid fa-briefcase"></i>
+
+          <span>Carrières</span>
+        </div>
+
+        <div class="flex items-center gap-2 cursor-pointer">
+          <i class="fa-regular fa-envelope"></i>
+
+          <span>Nous contacter</span>
+        </div>
+      </div>
+
+      <!-- LANGUAGE -->
+      <div class="mt-10 flex items-center gap-2 text-[20px] cursor-pointer">
+        <span>FR</span>
+
+        <i class="fa-solid fa-angle-down text-sm"></i>
+      </div>
+    </section>
+  </header>
+  <main class="mt-20">
+    <section class="relative w-full min-h-screen overflow-hidden">
+      <!-- Image -->
+      <img
+        src="./assets/images/plaque Ola.jpeg"
+        alt="image"
+        class="w-full h-full object-cover absolute inset-0"
+      />
+  
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/50 z-10"></div>
+  
+      <!-- Texte -->
+      <div
+        class="absolute z-20 px-6 sm:px-10 lg:px-20 top-16 sm:top-24 lg:top-20"
+      >
+        <h1
+          class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight"
+        >
+          Qui nous sommes
+        </h1>
+  
+        <h2
+          class="text-xl sm:text-2xl text-white font-semibold mt-4 leading-snug"
+        >
+          Une énergie qui fait avancer les marchés
+        </h2>
+  
+        <p class="text-sm sm:text-base lg:text-lg text-white leading-7 mt-5">
+          OLA Energy opère dans 17 pays et soutient la mobilité, l’activité
+          économique et le progrès sur des marchés africains à fort potentiel de
+          croissance.
+        </p>
+  
+        <p class="text-sm sm:text-base lg:text-lg text-white leading-7 mt-5">
+          Nous fournissons des solutions énergétiques fiables et accessibles,
+          tout en contribuant activement aux communautés que nous servons.
+          Notre approche repose sur une présence locale solide, une
+          performance constante et un engagement à long terme.
+        </p>
+  
+        <p class="text-sm sm:text-base lg:text-lg text-white leading-7 mt-5">
+          Fondée sur l’intégrité, la transparence et la responsabilité, OLA
+          Energy est un partenaire de confiance, engagé dans une croissance
+          responsable et un impact concret.
+        </p>
+  
+        <!-- Boutons -->
+        <div class="flex flex-col sm:flex-row gap-4 pt-6">
+          <button class="btn w-full sm:w-auto">
+            Trouver une station
+          </button>
+  
+          <button class="btn-marhaba w-full sm:w-auto">
             Explorer nos activités B2B
           </button>
         </div>
       </div>
     </section>
-
-    <section class="flex justify-center items-center flex-col mt-24">
-      <h1 class="text-4xl font-bold mb-10">Notre empreinte</h1>
-
-      <div class="flex gap-20 mt-8">
-        <div class="space-y-3 text-center">
-          <h2 class="text-6xl font-semibold text-black">+1350</h2>
-
-          <p class="text-xl">Station-service</p>
+  
+    <section class="flex justify-center items-center flex-col mt-20 px-6">
+      <h1 class="text-3xl sm:text-4xl font-bold mb-10 text-center">
+        Notre empreinte
+      </h1>
+  
+      <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-20 mt-8 text-center"
+    >
+      <div>
+        <div class="flex items-center justify-center gap-2 mb-2">
+          <span class="text-orange text-3xl sm:text-4xl lg:text-5xl font-semibold">
+            +
+          </span>
+          <h3
+            class="text-4xl sm:text-5xl lg:text-6xl font-semibold text-black counter"
+            data-target="1350"
+          >
+            0
+          </h3>
+      
         </div>
-
-        <div class="space-y-3 text-center">
-          <h2 class="text-6xl font-semibold text-black">+8</h2>
-
-          <p class="text-xl">Usines de blending</p>
-        </div>
-
-        <div class="space-y-3 text-center">
-          <h2 class="text-6xl font-semibold text-black">
-            ~700<span class="text-blue">k</span>
-          </h2>
-
-          <p class="text-xl">Clients au quotidien</p>
-        </div>
-
-        <div class="space-y-3 text-center">
-          <h2 class="text-6xl font-semibold text-black">+52</h2>
-
-          <p class="text-xl">Aéroports desservis</p>
-        </div>
-
-        <div class="space-y-3 text-center">
-          <h2 class="text-6xl font-semibold text-black">+17</h2>
-
-          <p class="text-xl">Affiliés</p>
-        </div>
+    
+        <p class="text-base sm:text-xl">Station-service</p>
       </div>
+    
+      <div>
+        <div class="flex items-center justify-center gap-2 mb-2">
+          <span class="text-orange text-3xl sm:text-4xl lg:text-5xl font-semibold">
+            +
+          </span>
+          <h3
+            class="text-4xl sm:text-5xl lg:text-6xl font-semibold text-black counter"
+            data-target="8"
+          >
+            0
+          </h3>
+        </div>
+    
+        <p class="text-base sm:text-xl">Usines de blending</p>
+      </div>
+    
+      <div>
+        <div class="flex items-center justify-center gap-2 mb-2">
+          <span class="text-orange text-3xl sm:text-4xl lg:text-5xl font-semibold">
+            +
+          </span>
+          <h3
+            class="text-4xl sm:text-5xl lg:text-6xl font-semibold text-black counter"
+            data-target="700"
+          >
+            0
+          </h3>
+    
+          <span class="text-blue text-3xl sm:text-4xl lg:text-5xl font-semibold">
+            k
+          </span>
+        </div>
+    
+        <p class="text-base sm:text-xl">Clients au quotidien</p>
+      </div>
+    
+      <div>
+        <div class="flex items-center justify-center gap-2 mb-2">
+          <span class="text-orange text-3xl sm:text-4xl lg:text-5xl font-semibold">
+            +
+          </span>
+          <h3
+            class="text-4xl sm:text-5xl lg:text-6xl font-semibold text-black counter"
+            data-target="52"
+          >
+            0
+          </h3>
+        </div>
+    
+        <p class="text-base sm:text-xl">Aéroports desservis</p>
+      </div>
+    
+      <div>
+        <div class="flex items-center justify-center gap-2 mb-2">
+          <span class="text-orange text-3xl sm:text-4xl lg:text-5xl font-semibold">
+            +
+          </span>
+          <h3
+            class="text-4xl sm:text-5xl lg:text-6xl font-semibold text-black counter"
+            data-target="17"
+          >
+            0
+          </h3>
+        </div>
+    
+        <p class="text-base sm:text-xl">Affiliés</p>
+      </div>
+    </div>
     </section>
-
-    <section class="flex justify-evenly items-center relative bottom-20">
-      <div class="space-y-2">
-        <h1 class="text-3xl text-blue-900 font-bold">Ou nous sommes</h1>
-        <div class="w-63 h-0.5 bg-orange"></div>
-        <p class="text-lg text-blue-900 font-semibold">
-          Ola Energy opere dans plus de 17 <br /> pays, avec un réseau en <br />
-          developpement de stations- <br />service, de terminaux de stockages
-          <br />et de projets énergétiques.
+  
+    <section
+      class="flex flex-col lg:flex-row justify-evenly items-center relative px-6 lg:px-10 mt-24 gap-10"
+    >
+      <div class="space-y-4 text-center lg:text-left">
+        <h1 class="text-3xl text-blue-900 font-bold">
+          Ou nous sommes
+        </h1>
+  
+        <div class="w-40 h-0.5 bg-orange mx-auto lg:mx-0"></div>
+  
+        <p class="text-base sm:text-lg text-blue-900 font-semibold leading-8">
+          Ola Energy opere dans plus de 17 pays, avec un réseau en
+          developpement de stations-service, de terminaux de stockages
+          et de projets énergétiques.
         </p>
       </div>
-      <div class="mr-30 mt-60">
-        <img src="./assets/images/africa.svg" alt="" class="w-[400px] h-[400px] relative top-30 left-20" />
-        <img src="./assets/images/african2.png" alt="" class="w-[320px] h-[250px] relative bottom-104 left-40" />
+  
+      <div class="relative flex justify-center items-center">
+        <img
+          src="./assets/images/africa.svg"
+          alt=""
+          class="w-70 sm:w-87.5 lg:w-100 h-auto"
+        />
+  
+        <img
+          src="./assets/images/african2.png"
+          alt=""
+          class="absolute w-55 sm:w-65 lg:w-[320px] h-auto"
+        />
       </div>
     </section>
-
+  
     <!-- *****************************Section 4: Vision et Mission*********************** -->
-    <section class="">
-      <div class="flex gap-3 justify-center ">
-        <img src="./assets/images/zoom ola.png" alt="" class="w-140 h-100 object-cover rounded-2xl">
-        <img src="./assets/images/station.jpeg" alt="" class="w-140 h-100 object-cover rounded-2xl">
+    <section class="px-6 lg:px-10 mt-24">
+      <div class="flex flex-col lg:flex-row gap-6 justify-center">
+        <img
+          src="./assets/images/zoom ola.png"
+          alt=""
+          class="w-full lg:w-140 h-72 lg:h-100 object-cover rounded-2xl"
+        />
+  
+        <img
+          src="./assets/images/station.jpeg"
+          alt=""
+          class="w-full lg:w-140 h-72 lg:h-100 object-cover rounded-2xl"
+        />
       </div>
     </section>
-
+  
     <!-- *****************************Section 5: Axes strategiques*********************** -->
-    <section class="px-18 py-66 ">
-      <h1 class="text-5xl font-bold relative bottom-7">Axes strategiques</h1>
-      <div class="grid grid-cols-3 gap-11">
-        <div class="px-6 py-8 bg-orange-50 w-93 h-45 rounded-4xl">
-          <img src="./assets/images/cube.svg" alt="" class="w-15">
-          <p class="text-2xl font-bold">Intégration raffinage & <br />approvisionnement </p>
+    <section class="px-6 sm:px-10 lg:px-18 py-24 lg:py-40">
+      <h1
+        class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-12 text-center lg:text-left"
+      >
+        Axes strategiques
+      </h1>
+  
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="px-6 py-8 bg-orange-50 rounded-4xl w-full min-h-45"
+        >
+          <img src="./assets/images/cube.svg" alt="" class="w-15" />
+  
+          <p class="text-xl lg:text-2xl font-bold mt-4">
+            Intégration raffinage & <br />
+            approvisionnement
+          </p>
         </div>
-        <div class="px-6 py-8 bg-orange-50  w-93 h-45 rounded-4xl">
-          <img src="./assets/images/tick.svg" alt="" class="w-15">
-          <p class="text-2xl font-bold">Excellence opérationnelle en <br /> logistique </p>
+  
+        <div
+          class="px-6 py-8 bg-orange-50 rounded-4xl w-full min-h-45"
+        >
+          <img src="./assets/images/tick.svg" alt="" class="w-15" />
+  
+          <p class="text-xl lg:text-2xl font-bold mt-4">
+            Excellence opérationnelle en <br />
+            logistique
+          </p>
         </div>
-
-        <div class="px-6 py-8 bg-orange-50  w-93 h-45 rounded-4xl">
-          <img src="./assets/images/haut-parleur.svg" alt="" class="w-15">
-          <p class="text-2xl font-bold">Leadership de marché & <br /> croissance </p>
+  
+        <div
+          class="px-6 py-8 bg-orange-50 rounded-4xl w-full min-h-45"
+        >
+          <img src="./assets/images/haut-parleur.svg" alt="" class="w-15" />
+  
+          <p class="text-xl lg:text-2xl font-bold mt-4">
+            Leadership de marché & <br />
+            croissance
+          </p>
         </div>
       </div>
-
-      <div class="grid grid-cols-2 gap-11 relative top-7">
-        <div class="px-6 py-8 bg-orange-50 w-141 h-45 rounded-4xl">
-          <img src="./assets/images/star.svg" alt="" class="w-15">
-          <p class="text-2xl font-bold">Partenariats stratégiques & alliances </p>
+  
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+        <div
+          class="px-6 py-8 bg-orange-50 rounded-4xl w-full min-h-45"
+        >
+          <img src="./assets/images/star.svg" alt="" class="w-15" />
+  
+          <p class="text-xl lg:text-2xl font-bold mt-4">
+            Partenariats stratégiques & alliances
+          </p>
         </div>
-
-        <div class="px-6 py-8 bg-orange-50 w-141 h-45 rounded-4xl">
-          <img src="./assets/images/retour.svg" alt="" class="w-15">
-          <p class="text-2xl font-bold">Énergie durable & leadership ESG </p>
+  
+        <div
+          class="px-6 py-8 bg-orange-50 rounded-4xl w-full min-h-45"
+        >
+          <img src="./assets/images/retour.svg" alt="" class="w-15" />
+  
+          <p class="text-xl lg:text-2xl font-bold mt-4">
+            Énergie durable & leadership ESG
+          </p>
         </div>
-      </div>
       </div>
     </section>
-    <section class="px-20 py-20">
-      <h1 class="text-5xl font-bold">Histoire d’OLA Energy </h1>
-
+  
+    <section class="px-6 sm:px-10 lg:px-20 py-20">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center lg:text-left">
+        Histoire d’OLA Energy
+      </h1>
+  
       <!-- *****************left-side********** -->
-      <div class="flex gap-12 mt-12">
-        <div class="flex-1 flex flex-col gap-10">
-        <div>
-          <h2 class="text-orange font-bold text-4xl">1993</h2>
-          <div class="relative left-23 bottom-9">
-            <p class="font-bold text-2xl">Début des investissements en <br />Afrique. Tamoil lance ses activités
-              <br />aval en Égypte dans le cadre<br />
-              d’Oilinvest, holding basée en <br />Europe.
-            </p>
-            <p class="text-lg">Tamoil lance ses activités en aval en Égypte dans <br />le cadre d’Oilinvest, une société
-              holding basée
-              en <br />Europe.</p>
+      <div class="flex flex-col lg:flex-row gap-16 mt-16">
+        <div class="flex-1 flex flex-col gap-14">
+          <div>
+            <h2 class="text-orange font-bold text-3xl lg:text-4xl">1993</h2>
+  
+            <div class="lg:relative lg:left-23 lg:bottom-9 mt-4 lg:mt-0">
+              <p class="font-bold text-xl lg:text-2xl">
+                Début des investissements en Afrique.
+              </p>
+  
+              <p class="text-base lg:text-lg mt-3 leading-8">
+                Tamoil lance ses activités en aval en Égypte dans le cadre
+                d’Oilinvest, une société holding basée en Europe.
+              </p>
+            </div>
+          </div>
+  
+          <div>
+            <h2 class="text-orange font-bold text-3xl lg:text-4xl">2007</h2>
+  
+            <div class="lg:relative lg:left-23 lg:bottom-9 mt-4 lg:mt-0">
+              <p class="font-bold text-xl lg:text-2xl">
+                Diversification du portefeuille
+              </p>
+  
+              <p class="text-base lg:text-lg mt-3 leading-8">
+                Le Groupe élargit son portefeuille avec l’acquisition de
+                plusieurs affiliées ExxonMobil et renforce davantage ses
+                infrastructures énergétiques.
+              </p>
+            </div>
+          </div>
+  
+          <div>
+            <h2 class="text-orange font-bold text-3xl lg:text-4xl">2018</h2>
+  
+            <div class="lg:relative lg:left-23 lg:bottom-9 mt-4 lg:mt-0">
+              <p class="font-bold text-xl lg:text-2xl">
+                Lancement du processus de rebranding
+              </p>
+  
+              <p class="text-base lg:text-lg mt-3 leading-8">
+                Le groupe adopte progressivement l’identité OLA Energy
+                à travers ses activités panafricaines.
+              </p>
+            </div>
+          </div>
+  
+          <div>
+            <h2 class="text-orange font-bold text-3xl lg:text-4xl">
+              Aujourd'hui
+            </h2>
+  
+            <div class="lg:relative lg:left-53 lg:bottom-9 mt-4 lg:mt-0">
+              <p class="font-bold text-xl lg:text-2xl">
+                OLA Energy aujourd’hui
+              </p>
+  
+              <p class="text-base lg:text-lg mt-3 leading-8">
+                OLA Energy est aujourd’hui un groupe énergétique
+                panafricain au service de plusieurs secteurs.
+              </p>
+            </div>
           </div>
         </div>
-
-
-
-        <div>
-          <h2 class="text-orange font-bold text-4xl">2007</h2>
-          <div class="relative left-23 bottom-9">
-            <p class="font-bold text-2xl">Diversification du portefeuille
-            </p>
-            <p class="text-lg">Le Groupe élargit son portefeuille avec<br /> l’acquisition de neuf affiliées ExxonMobil
-              au Niger,<br /> au Sénégal, en Côte d’Ivoire, au Gabon, au<br /> Cameroun, au Kenya, à La Réunion, en
-              Tunisie et<br /> au Maroc.
-
-              L’acquisition de Joint Oil et d’Altube renforce<br /> davantage les activités
-              d’infrastructure<br />énergétique du
-              Groupe.<br />
-
-              Libya Oil Holdings Ltd est constituée et deviendra<br /> par la suite partie intégrante de la
-              structure<br /> actuelle
-              du groupe OLA Energy.</p>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-orange font-bold text-4xl">2018</h2>
-          <div class="relative left-23 bottom-9">
-            <p class="font-bold text-2xl">Lancement du processus de <br />rebranding à l’échelle du Groupe
-            </p>
-            <p class="text-lg">Started a rebranding of its corporate identity in <br /> 2018 which changed the name of
-              its retail brand<br /> to OLA Energy.
-
-              Formerly known through entities including Libya<br /> Oil Holdings Ltd and Tamoil Africa Holdings<br />
-              Limited.</p>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-orange font-bold text-4xl">Aujourd'hui</h2>
-          <div class="relative left-53 bottom-9">
-            <p class="font-bold text-2xl">OLA Energy aujourd’hui
-            </p>
-            <p class="text-lg">OLA Energy est aujourd’hui un groupe<br /> énergétique panafricain, au service de ses
-              clients<br /> à
-              travers le retail, les lubrifiants, l’aviation, le <br />marine, le GPL, l’industrie et la vente en
-              gros,<br />
-              l’approvisionnement et le trading, ainsi que les<br /> services de proximité.</p>
-          </div>
-        </div>
-        </div>
-
-
-
-
+  
         <!-- *****************right-side********** -->
-        <div class="flex-1 flex flex-col gap-10">
+        <div class="flex-1 flex flex-col gap-14">
           <div>
-            <h2 class="text-orange font-bold text-4xl">2000</h2>
-            <div class="relative left-23 bottom-9">
-              <p class="font-bold text-2xl">Établir une présence en Afrique
+            <h2 class="text-orange font-bold text-3xl lg:text-4xl">2000</h2>
+  
+            <div class="lg:relative lg:left-23 lg:bottom-9 mt-4 lg:mt-0">
+              <p class="font-bold text-xl lg:text-2xl">
+                Établir une présence en Afrique
               </p>
-              <p class="text-lg">Tamoil Chad S.A., Tamoil Niger S.A., Tamoil Mali <br />S.A. et Tamoil Burkina S.A. sont
-                constituées.<br />
-
-                Shell Eritrea est acquise.<br />
-
-                Tamoil Africa Holdings Limited est constituée à <br />Malte afin de consolider les activités d’Oilinvest
-                à<br />
-                travers l’Afrique.</p>
+  
+              <p class="text-base lg:text-lg mt-3 leading-8">
+                Plusieurs entités Tamoil sont constituées afin de
+                consolider les activités africaines du groupe.
+              </p>
             </div>
           </div>
-
+  
           <div>
-            <h2 class="text-orange font-bold text-4xl">2008</h2>
-            <div class="relative left-23 bottom-9">
-              <p class="font-bold text-2xl">Accélération de la croissance en Afrique
+            <h2 class="text-orange font-bold text-3xl lg:text-4xl">2008</h2>
+  
+            <div class="lg:relative lg:left-23 lg:bottom-9 mt-4 lg:mt-0">
+              <p class="font-bold text-xl lg:text-2xl">
+                Accélération de la croissance en Afrique
               </p>
-              <p class="text-lg">Cinq affiliées Shell sont acquises au Niger, au <br />Tchad, à Djibouti, en Éthiopie et
-                au Soudan.</p>
+  
+              <p class="text-base lg:text-lg mt-3 leading-8">
+                Plusieurs affiliées Shell sont acquises dans plusieurs
+                pays africains afin d’étendre les opérations du groupe.
+              </p>
             </div>
           </div>
-
         </div>
       </div>
     </section>
+  
     <section class=""></section>
   </main>
 
-  <footer class=""></footer>
+  <footer class="bg-linear-to-b from-blue-black to-blue-black text-white">
+    <section class="  ">
+      <div class="grid gap-12">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-4 px-6 max-md:py-12 pt-12 md-max-lg:justify-center gap-10 max-w-6xl max-lg:max-w-md mx-auto"
+        >
+          <!-- LOGO -->
+          <div class="space-y-5">
+            <img
+              src="./assets/images/logoblack.png"
+              alt="logo"
+              class="w-32"
+            />
+
+            <div>
+              <h2 class="text-xl font-bold italic leading-snug">
+                Prenons la route ensemble
+              </h2>
+
+              <p class="text-grey mt-3 leading-relaxed text-sm">
+                Alimenter la mobilité et l'industrie sur les marchés à fortes
+                croissance
+              </p>
+            </div>
+
+            <!-- SOCIALS -->
+            <div class="flex items-center gap-4 pt-2">
+              <i class="fa-brands fa-square-facebook text-2xl"></i>
+              <i class="fa-brands fa-square-linkedin text-2xl"></i>
+              <i class="fa-brands fa-instagram text-2xl"></i>
+              <i class="fa-brands fa-youtube text-2xl"></i>
+            </div>
+          </div>
+
+          <!-- LINKS GRID -->
+          <div class="lg:col-span-3">
+            <div class="grid grid-cols-3 gap-10">
+              <!-- Institutionnel -->
+              <div>
+                <h3 class="font-bold text-sm mb-5">Institutionnel</h3>
+
+                <ul class="space-y-3 text-grey text-sm">
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Qui nous sommes</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Message du Président Exécutif</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Comité exécutif</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition">Marques</a>
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Code de conduite des affaires</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Durabilité -->
+              <div class="text-sm">
+                <h3 class="font-bold mb-5">Durabilité</h3>
+
+                <ul class="space-y-3 text-grey text-sm">
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Communauté et développement des personnes</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Éthique et gouvernance</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Environnement</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Sécurité opérationnelle & routière</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Partenaire -->
+              <div>
+                <h3 class="font-bold text-sm mb-5">
+                  Devenez partenaire avec nous
+                </h3>
+
+                <ul class="space-y-3 text-grey text-sm">
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Devenir revendeur</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Devenir franchisé</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Devenir distributeur</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Investir avec OLA</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Entreprise -->
+              <div>
+                <h3 class="font-bold text-sm mb-5">Entreprise</h3>
+
+                <ul class="space-y-3 text-grey text-sm">
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Industrie & vente en gros</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Réseau de stations</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Aviation</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition">Marine</a>
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Lubrifiants</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Services cartes</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Boutiques</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Approvisionnement et négoce</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Particuliers -->
+              <div>
+                <h3 class="font-bold text-sm mb-5">Particuliers</h3>
+
+                <ul class="space-y-3 text-grey text-sm">
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Stations-service</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >OLA AutoCare</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition">O'Card</a>
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Services cartes</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition">GPL</a>
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition">marhaba</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Ecosystème -->
+              <div>
+                <h3 class="font-bold text-sm mb-5">Écosystème OLA</h3>
+
+                <ul class="space-y-3 text-grey text-sm">
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Lubrifiants OLA</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition">marhaba</a>
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Académie OLA</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="hover:text-white transition"
+                      >Trouver une station</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-footer p-10">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-6 md:place-items-center px-4 max-w-5xl mx-auto justify-betweenmd:justify-center "
+          >
+            <!-- LEFT -->
+            <div class="flex md:flex-col gap-4 ">
+              <img
+                src="./assets/images/logoblack.png"
+                alt="logoblack"
+                class="w-10 md:ml-10"
+              />
+
+              <p class="text-gray-300 md:ml-10 text-sm text-nowrap max-md:text-[8px]">
+                Copyright © 2026 OLA Energy Corporation. Tous droits réservés.
+              </p>
+            </div>
+
+            <!-- RIGHT -->
+            <div
+              class="flex max-md:justify-end md:items-center gap-4 text-sm text-gray-300"
+            >
+              <p class="hover:text-white cursor-pointer transition">
+                Conditions générales
+              </p>
+
+              <p class="hover:text-white cursor-pointer transition">
+                Nous contacter
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <script src="./assets/css/icons/all.min.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

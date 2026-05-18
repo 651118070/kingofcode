@@ -1,0 +1,480 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #000;
+}
+
+/* Conteneur principal */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Pleine hauteur de l'écran */
+    min-height: 500px;
+    display: flex;
+    align-items: flex-end; /* Aligne le contenu en bas */
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+/* Image d'arrière-plan responsive */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Remplacer l'URL ci-dessous par le chemin de votre image locale */
+    background-image: url('../images/fhGaj4Z4tqH5r71UqDrrmAUCCBQ\ \(1\).jpeg'); 
+    background-size: cover;
+    background-position: center 30%;
+    z-index: 1;
+}
+
+/* Filtre sombre pour garantir le contraste du texte blanc */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 1;
+}
+
+/* Zone du texte */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 80px 40px; /* Marges internes adaptées */
+    color: #ffffff;
+}
+
+/* Titre principal */
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.15;
+    max-width: 600px;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    color: white;
+}
+
+/* Description */
+.hero-description {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 500px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    color: white;
+}
+
+/* Bouton "Nous contacter" */
+/* .hero-button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+} */
+
+/* Effets au survol du bouton */
+.hero-button:hover {
+    background-color: #f0f0f0;
+}
+
+.hero-button:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================================== */
+
+/* Tablettes (Écrans inférieurs à 992px) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+        max-width: 500px;
+    }
+    
+    .hero-content {
+        padding: 0 30px 60px 30px;
+    }
+}
+
+/* Smartphones grands modèles (Écrans inférieurs à 768px) */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 90vh; /* Réduction légère de la hauteur sur mobile */
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        max-width: 100%;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+    
+    .hero-content {
+        padding: 0 20px 40px 20px;
+    }
+
+    /* .hero-button {
+        width: 100%; Le bouton prend toute la largeur sur mobile 
+        text-align: center;
+        padding: 16px 0;
+    } */
+}
+
+/* ==========================================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================================== */
+
+
+/* Smartphones petits modèles (Écrans inférieurs à 480px) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+}
+
+.btn-button {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #ffffff;
+    color: #333333;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+.btn-button:hover {
+    background-color: orangered;
+}
+
+
+/* Conteneur principal */
+.contact-container {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    padding: 10px;
+}
+
+ /* En-tête */
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: black;
+    line-height: 1.5;
+    margin-bottom: 35px;
+    padding: 0 10px;
+}
+
+/* Formulaire */
+form {
+    text-align: left;
+    }
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    color: #999999;
+    margin-bottom: 8px;
+}
+
+/* Champs de saisie et sélections */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    color: #333333;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+/* Effet au survol / focus */
+input:focus, select:focus, textarea:focus {
+    border-color: #b5b5b5;
+    background-color: #fdfdfd;
+}
+
+/* Style spécifique pour le menu déroulant */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='w3.org' width='12' height='12' fill='%23999999' viewBox='0 0 16 16'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    color: #999999;
+}
+
+/* Style des textes indicatifs (Placeholders) */
+input::placeholder, textarea::placeholder {
+    color: #b5b5b5;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Case à cocher (Checkbox) */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Bouton d'envoi */
+.btn-submit {
+    width: 100%;
+    background-color: #262626;
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #1a1a1a;
+}
+
+/* ==========================================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================================== */
+
+/* --- RESPONSIVE DESIGN (Adaptation Mobile) --- */
+ @media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        padding: 12px 14px;
+        font-size: 13px;
+    }
+
+    .btn-submit {
+        padding: 14px;
+        font-size: 13px;
+    }
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9; /* Couleur de fond légère */
+    color: #333;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/* Conteneur principal */
+.approach-section {
+    background-color: gray;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* Ombre très légère comme sur l'image */
+}
+
+/* Titre */
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: #000;
+    gap: 50px;
+}
+
+/* Paragraphes */
+.text {
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+    color: #444;
+    text-align: justify; /* Pour un aspect professionnel */
+}
+
+/* Premier paragraphe souvent un peu plus gras ou marqué */
+.highlight {
+    font-weight: 600;
+}
+
+ /* ==========================================================
+   MEDIA QUERIES (RESPONSIVE)
+    ========================================================== */
+
+/* --- RESPONSIVE DESIGN --- */
+/* Tablettes */
+@media (max-width: 768px) {
+    .approach-section {
+        padding: 40px 30px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+    .approach-section {
+        padding: 30px 20px;
+    }
+
+    .title {
+        font-size: 1.75rem;
+        text-align: left;
+    }
+
+    .text {
+        font-size: 0.95rem;
+        text-align: left; /* On enlève le justify sur mobile pour la lisibilité */
+    }
+}
+
+
+
+/* Conteneur principal */
+.card-container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    box-sizing: border-box;
+    /* background-color: #991515; */
+    max-width: 950px;
+    margin: 0 auto;
+    /* padding: 60px; */
+    border-radius: 4px;
+    /* box-shadow: 0 2px 10px rgba(0,0,0,0.05); Ombre très légère comme sur l'image */
+}
+
+.content-card {
+    background-color: #991515;
+    border-radius: 8px;
+    padding: 50px 60px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); /* Ombre très légère */
+
+    /* font-weight: 600; */
+}
+
+/* Titre */
+.content-card h1 {
+    font-size: 2.5rem;
+    font-weight: 1010;
+    margin-bottom: 25px;
+    color: #000;
+}
+
+/* Paragraphes */
+.content-card p {
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+    color: #444;
+    text-align: justify; /* Pour un aspect professionnel */
+}
+
+
+/* Responsive */
+/* Adaptabilité pour les écrans mobiles */
+@media (max-width: 480px) {
+    .content-card {
+        padding: 30px 25px;
+    }
+    
+    .content-card h1 {
+        font-size: 1.8rem;
+    }
+    .content-card p {
+        font-size: 0.95rem;
+        text-align: left;  /* On enlève le justify sur mobile pour la lisibilité */
+    }
+}
+
+/* --- RESPONSIVE DESIGN --- */
+/* Tablettes */
+@media (max-width: 768px) {
+    .content-card {
+        padding: 40px 30px;
+        font-size: 2rem;
+    }
+}
+
+
