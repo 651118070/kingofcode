@@ -1,0 +1,520 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* --- Conteneur Principal (Bannière) --- */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    max-width: 1140px;
+    height: 450px; /* Hauteur fixe par défaut pour les grands écrans */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    margin-bottom: 80px;
+    background-image: url('../images/fhGaj4Z4tqH5r71UqDrrmAUCCBQ\ \(1\).jpeg'); 
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+}
+
+.hero-section {
+    /* position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px; */
+    /* Remplacez par le lien de votre image réelle */
+    /* background-image: url('../images/fhGaj4Z4tqH5r71UqDrrmAUCCBQ\ \(1\).jpeg'); 
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    margin-bottom: 80px; */
+}
+
+/* Filtre sombre pour garantir la lisibilité du texte blanc */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 1;
+}
+
+/* Alignement du contenu */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 550px;
+    color: #ffffff;
+}
+
+/* Titre principal */
+.hero-content h1 {
+    margin-top: 400px;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.15;
+    /* margin-bottom: 20px; */
+    letter-spacing: -0.5px;
+}
+
+/* Sous-titre */
+.hero-content p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+/* Adaptation pour les écrans mobiles */
+@media (max-width: 768px) {
+    .hero-section {
+        padding-left: 5%;
+        padding-right: 5%;
+        background-position: center center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Bouton "Nous contacter" */
+.btn-contact {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #333333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px 28px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Effets au survol du bouton */
+.btn-contact:hover {
+    background-color: yellow;
+} 
+
+.btn-contact:active {
+    transform: scale(0.98);
+}
+
+
+@media (hover: hover) {
+    .btn-contact:hover {
+        background-color: yellow;
+    }
+}
+
+/* Ajustements pour les écrans plus grands (Tablettes et Ordinateurs) */
+@media screen and (min-width: 768px) {
+    .btn-contact {
+        width: auto; /* Reprend sa taille naturelle selon le texte */
+        padding: 12px 28px; /* Marges adaptées aux ordinateurs */
+        font-size: 18px; /* Texte légèrement plus grand */
+    }
+}
+
+.conteneur-bouton {
+    text-align: center; /* Centré par défaut sur mobile */
+}
+
+@media screen and (min-width: 768px) {
+    .conteneur-bouton {
+        text-align: left; /* Aligné à gauche sur ordinateur (optionnel) */
+    }
+    .btn-contact {
+        width: auto; 
+        padding: 12px 28px; 
+        font-size: 18px; 
+}
+
+/* Style du bouton "Nous contacter" */
+/* .btn-contact {
+    display: inline-block;
+    background-color: #0056b3; Bleu corporate
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-contact:hover {
+    background-color: #004085;
+} */
+
+
+/* Ajustements pour la carte de connexion */
+.login-card {
+    max-width: 450px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.subtitle {
+    color: #666666 !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 30px !important;
+} */
+
+/* Structure du formulaire */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444444;
+}
+
+.form-group input {
+    padding: 12px;
+    font-size: 0.95rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #0056b3;
+} 
+
+/* Bouton de soumission du formulaire */
+.btn-submit {
+    background-color: #111111;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #333333;
+} */
+
+/* Lien de retour */
+.login-footer {
+    margin-top: 25px;
+    text-align: center;
+    border-top: 1px solid #eeeeee;
+    padding-top: 20px;
+}
+
+.btn-back {
+    color: #666666;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.btn-back:hover {
+    color: #111111;
+    text-decoration: underline;
+} */
+
+
+
+
+
+
+/* Réinitialisation de base */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9; /* Couleur de fond légère */
+    color: #333;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/* Conteneur principal */
+.approach-section {
+    background-color: gray;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* Ombre très légère comme sur l'image */
+}
+
+/* Titre */
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: #000;
+    gap: 50px;
+}
+
+/* Paragraphes */
+.text {
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+    color: #444;
+    text-align: justify; /* Pour un aspect professionnel */
+}
+
+/* Premier paragraphe souvent un peu plus gras ou marqué */
+.highlight {
+    font-weight: 600;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+/* Tablettes */
+@media (max-width: 768px) {
+    .approach-section {
+        padding: 40px 30px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+    .approach-section {
+        padding: 30px 20px;
+    }
+
+    .title {
+        font-size: 1.75rem;
+        text-align: left;
+    }
+
+    .text {
+        font-size: 0.95rem;
+        text-align: left; /* On enlève le justify sur mobile pour la lisibilité */
+    }
+}
+
+/* Conteneur principal */
+.card-container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    box-sizing: border-box;
+    /* background-color: #991515; */
+    max-width: 800px;
+    margin: 0 auto;
+    /* padding: 60px; */
+    border-radius: 4px;
+    /* box-shadow: 0 2px 10px rgba(0,0,0,0.05); Ombre très légère comme sur l'image */
+}
+
+.content-card {
+    background-color: #991515;
+    border-radius: 8px;
+    padding: 50px 60px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); /* Ombre très légère */
+
+    /* font-weight: 600; */
+}
+
+/* Titre */
+.content-card h1 {
+    font-size: 2.5rem;
+    font-weight: 1010;
+    margin-bottom: 25px;
+    color: #000;
+}
+
+/* Paragraphes */
+.content-card p {
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+    color: #444;
+    text-align: justify; /* Pour un aspect professionnel */
+}
+
+
+/* Responsive */
+/* Adaptabilité pour les écrans mobiles */
+@media (max-width: 480px) {
+    .content-card {
+        padding: 30px 25px;
+    }
+    
+    .content-card h1 {
+        font-size: 1.8rem;
+    }
+    .content-card p {
+        font-size: 0.95rem;
+        text-align: left;  /* On enlève le justify sur mobile pour la lisibilité */
+    }
+}
+
+/* --- RESPONSIVE DESIGN --- */
+/* Tablettes */
+@media (max-width: 768px) {
+    .content-card {
+        padding: 40px 30px;
+        font-size: 2rem;
+    }
+}
+
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+/* FOOTER */
+
+.footer{
+    /* background: linear-gradient(to right, #001f8f #040b3d); */
+    color: white;
+    padding-top: 60px;
+    background: #040b3d ;
+}
+
+.footer-container{
+    width: 90%;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 50px;
+    background: #040b3d ;
+}
+
+/* .footer-logo h1{
+    font-size: 55px;
+    margin-bottom: 10px;
+} */
+
+.footer-logo img{
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p{
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.socials{
+    display: flex;
+    gap: 15px;
+}
+
+.socials a{
+    width: 40px;
+    height: 40px;
+    background: white;
+    color: #001f8f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* .foot-container{    
+    display: grid;
+    grid-template-columns: repeat("3, 1fr");
+} */
+
+.footer-column{
+    display: grid;
+    flex-direction: column ;
+    gap: 12px;
+}
+
+.footer-column h3{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.footer-column a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-bottom{
+    margin-top: 50px;
+    padding: 20px 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: #010D1C;
+}
+
+.footer-links{
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width:768px) {
+    .footer-container{
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo h1{
+        font-size: 45px;
+    }
+
+    .footer-logo p{
+        font-size: 18px;
+    }
+}
+
+
+
+
+

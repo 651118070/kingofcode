@@ -1,0 +1,96 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Conteneur principal */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+/* En-tête */
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 50px;
+}
+
+/* Structure des lignes et boutons */
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Boutons (Badges pays) */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #888888;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Effets au survol */
+.btn:hover {
+    color: #1a1a1a;
+    border-color: #999999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Bouton Corporate spécifique */
+.btn-corporate {
+    border-color: #dcdcdc;
+}
+
+/* Adaptabilité pour les écrans mobiles */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .row {
+        gap: 10px;
+    }
+    
+    .btn {
+        padding: 10px 18px;
+        font-size: 0.88rem;
+    }
+}

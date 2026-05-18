@@ -1,0 +1,358 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: white;
+}
+
+/* Conteneur principal */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Pleine hauteur de l'écran */
+    min-height: 500px;
+    display: flex;
+    align-items: flex-end; /* Aligne le contenu en bas */
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+/* Image d'arrière-plan responsive */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Remplacer l'URL ci-dessous par le chemin de votre image locale */
+    background-image: url('../images/koNAKlFSwsokqegt8ki2bOvY.jpeg'); 
+    background-size: cover;
+    background-position: center 30%;
+    z-index: 1;
+}
+
+/* Filtre sombre pour garantir le contraste du texte blanc */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.4) 100%); */
+    z-index: 1;
+}
+
+/* Zone du texte */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 80px 40px; /* Marges internes adaptées */
+    color: #ffffff;
+}
+
+/* Titre principal */
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.15;
+    max-width: 600px;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    color: white;
+}
+
+/* Description */
+.hero-description {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 500px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    color: white;
+}
+
+/* Bouton "Nous contacter" */
+/* .hero-button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+} */
+
+/* Effets au survol du bouton */
+.hero-button:hover {
+    background-color: #f0f0f0;
+}
+
+.hero-button:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================================== */
+
+/* Tablettes (Écrans inférieurs à 992px) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+        max-width: 500px;
+    }
+    
+    .hero-content {
+        padding: 0 30px 60px 30px;
+    }
+}
+
+/* Smartphones grands modèles (Écrans inférieurs à 768px) */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 90vh; /* Réduction légère de la hauteur sur mobile */
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        max-width: 100%;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+    
+    .hero-content {
+        padding: 0 20px 40px 20px;
+    }
+
+    /* .hero-button {
+        width: 100%; Le bouton prend toute la largeur sur mobile 
+        text-align: center;
+        padding: 16px 0;
+    } */
+}
+
+/* ==========================================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================================== */
+
+
+/* Smartphones petits modèles (Écrans inférieurs à 480px) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+}
+
+.btn-button {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #ffffff;
+    color: #333333;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+.btn-button:hover {
+    background-color: orangered;
+}
+
+
+/* Conteneur principal */
+.card-container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    box-sizing: border-box;
+    /* background-color: #991515; */
+    max-width: 950px;
+    margin: 0 auto;
+    /* padding: 60px; */
+    border-radius: 4px;
+    /* box-shadow: 0 2px 10px rgba(0,0,0,0.05); Ombre très légère comme sur l'image */
+}
+
+.content-card {
+    background-color: #991515;
+    border-radius: 8px;
+    padding: 50px 60px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); /* Ombre très légère */
+
+    /* font-weight: 600; */
+}
+
+/* Titre */
+.content-card h1 {
+    font-size: 2.5rem;
+    font-weight: 1010;
+    margin-bottom: 25px;
+    color: #000;
+}
+
+/* Paragraphes */
+.content-card p {
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+    color: #444;
+    text-align: justify; /* Pour un aspect professionnel */
+}
+
+
+/* Responsive */
+/* Adaptabilité pour les écrans mobiles */
+@media (max-width: 480px) {
+    .content-card {
+        padding: 30px 25px;
+    }
+    
+    .content-card h1 {
+        font-size: 1.8rem;
+    }
+    .content-card p {
+        font-size: 0.95rem;
+        text-align: left;  /* On enlève le justify sur mobile pour la lisibilité */
+    }
+}
+
+
+
+/* ==========================================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================================== */
+
+/* --- RESPONSIVE DESIGN --- */
+/* Tablettes */
+@media (max-width: 768px) {
+    .content-card {
+        padding: 40px 30px;
+        font-size: 2rem;
+    }
+}
+
+/* body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+} */
+
+
+/* Conteneur principal */
+/* .container {
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} */
+
+/* En-tête */
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    width: 100%;
+    margin-top: 150px;
+   
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.header p {
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Structure des lignes et boutons */
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Boutons (Badges pays) */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #888888;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Effets au survol */
+.btn:hover {
+    color: #1a1a1a;
+    border-color: #999999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Bouton Corporate spécifique */
+.btn-corporate {
+    border-color: #dcdcdc;
+}
+
+/* Adaptabilité pour les écrans mobiles */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .row {
+        gap: 10px;
+    }
+    
+    .btn {
+        padding: 10px 18px;
+        font-size: 0.88rem;
+    }
+}
