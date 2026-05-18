@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/output.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="relative">
+          <img src="./assets/images/car.jpeg" alt="" class="w-full" />
+          <div class="absolute inset-0 bg-black/15"></div>
+          <h1
+            class="text-6xl font-bold ml-20 space-y-3 absolute top-[30rem] text-white"
+          >
+            <div>Code de</div>
+            <div>conduite des</div>
+            <div>affaires</div>
+          </h1>
+        </div>
+      </section>
+
+      <!-- Apercu du Code -->
+
+      <section>
+        <div class=" m-10 border border-gray-200 rounded-xl overflow-hidden">
+          <button
+            onclick="toggleAccordion()"
+            class="w-full flex justify-between items-center px-5 py-4 bg-white cursor-pointer text-left"
+          >
+            <span class="text-xl font-medium text-blue-800"
+              >Aperçu du Code de conduite des affaires</span
+            >
+            <span
+              id="icon-wrapper"
+              class="w-7 h-7 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0"
+            >
+              <i
+                id="accordion-icon"
+                class="ti ti-minus text-white text-base"
+              ></i>
+            </span>
+          </button>
+
+          <div id="accordion-body">
+            <div class="h-px bg-gray-200"></div>
+            <p class="px-5 py-4 text-base leading-7 text-gray-800 font-semibold">
+              Chez OLA Energy, la manière dont nous menons nos activités compte
+              autant que ce que nous accomplissons. Notre Code de conduite des
+              affaires constitue <br />le socle de cet engagement : une promesse
+              claire d'agir avec éthique, responsabilité et cohérence avec les
+              valeurs que nos clients et partenaires attendent <br /> de nous. Il
+              définit l'exigence que nous appliquons chaque jour, fondée sur la
+              santé et la sécurité, l'excellence du service, la qualité, la
+              responsabilité sociale et la <br /> volonté constante de progresser.
+              Partout où nous opérons, nous respectons les lois applicables —
+              locales, nationales et internationales. Nos équipes sont <br />formées,
+              accompagnées et tenues de respecter ces standards dans chacune de
+              leurs décisions. Chaque personne chez OLA Energy, des équipes de
+              terrain à <br /> la direction générale, est responsable du respect de ce
+              Code. Nous le lisons, nous l'appliquons et nous signalons toute
+              situation contraire à nos principes. <br />Lorsque nos standards ne sont
+              pas respectés, nous agissons. Les manquements sont pris au sérieux
+              et traités par des mesures disciplinaires appropriées,<br />
+              conformément aux lois locales. C'est notre engagement envers nos
+              collaborateurs, nos partenaires et les communautés que nous
+              servons.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      let open = true;
+      function toggleAccordion() {
+        open = !open;
+        document.getElementById("accordion-body").style.display = open
+          ? "block"
+          : "none";
+        document.getElementById("accordion-icon").className = open
+          ? "ti ti-minus text-white text-base"
+          : "ti ti-plus text-white text-base";
+      }
+    </script>
+  </body>
+</html>
